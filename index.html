@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tushy - Movie Events & Bookings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>TUSHY</h1>
+                <p>Premium Cinema Experience</p>
+            </div>
+            <nav>
+                <a href="#events">Events</a>
+                <a href="#booking-space">Booking Space</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Experience Cinema Like Never Before</h2>
+            <p>Book your tickets for upcoming movie events</p>
+            <a href="#events" class="btn-primary">Explore Events</a>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events-section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Movie Events</h2>
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <div class="event-badge">PREMIERE</div>
+                        <div class="placeholder-img">🎬</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>The Dark Chronicles</h3>
+                        <p class="event-info">Action | Thriller | 2h 30m</p>
+                        <p class="event-date">October 20, 2025 | 7:00 PM</p>
+                        <p class="event-price">$15.00</p>
+                        <button class="btn-book" onclick="openBooking('The Dark Chronicles', 15)">Book Tickets</button>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <div class="event-badge">NEW</div>
+                        <div class="placeholder-img">🎭</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>Midnight Symphony</h3>
+                        <p class="event-info">Drama | Mystery | 2h 15m</p>
+                        <p class="event-date">October 22, 2025 | 8:30 PM</p>
+                        <p class="event-price">$12.00</p>
+                        <button class="btn-book" onclick="openBooking('Midnight Symphony', 12)">Book Tickets</button>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <div class="event-badge">CLASSIC</div>
+                        <div class="placeholder-img">🎥</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>Noir Nights</h3>
+                        <p class="event-info">Classic | Film Noir | 1h 50m</p>
+                        <p class="event-date">October 25, 2025 | 6:00 PM</p>
+                        <p class="event-price">$10.00</p>
+                        <button class="btn-book" onclick="openBooking('Noir Nights', 10)">Book Tickets</button>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <div class="event-badge">EXCLUSIVE</div>
+                        <div class="placeholder-img">🌟</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>Starlight Premiere</h3>
+                        <p class="event-info">Sci-Fi | Adventure | 2h 45m</p>
+                        <p class="event-date">October 28, 2025 | 9:00 PM</p>
+                        <p class="event-price">$18.00</p>
+                        <button class="btn-book" onclick="openBooking('Starlight Premiere', 18)">Book Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Space Section -->
+    <section id="booking-space" class="booking-space-section">
+        <div class="container">
+            <h2 class="section-title">Book Our Premium Space</h2>
+            <p class="section-subtitle">Host private screenings, corporate events, or special celebrations</p>
+            
+            <div class="space-grid">
+                <!-- Theater 1 -->
+                <div class="space-card">
+                    <div class="space-image">
+                        <div class="space-icon">🎪</div>
+                    </div>
+                    <div class="space-details">
+                        <h3>Grand Theater</h3>
+                        <div class="space-features">
+                            <span>👥 Capacity: 150 seats</span>
+                            <span>📽️ 4K Laser Projection</span>
+                            <span>🔊 Dolby Atmos Sound</span>
+                            <span>⏱️ Full Day: $800</span>
+                            <span>⏱️ Half Day: $450</span>
+                        </div>
+                        <button class="btn-book" onclick="openSpaceBooking('Grand Theater', 800, 450)">Book Space</button>
+                    </div>
+                </div>
+
+                <!-- Theater 2 -->
+                <div class="space-card">
+                    <div class="space-image">
+                        <div class="space-icon">🎬</div>
+                    </div>
+                    <div class="space-details">
+                        <h3>VIP Lounge</h3>
+                        <div class="space-features">
+                            <span>👥 Capacity: 40 seats</span>
+                            <span>🛋️ Luxury Recliners</span>
+                            <span>🍿 Catering Available</span>
+                            <span>⏱️ Full Day: $500</span>
+                            <span>⏱️ Half Day: $300</span>
+                        </div>
+                        <button class="btn-book" onclick="openSpaceBooking('VIP Lounge', 500, 300)">Book Space</button>
+                    </div>
+                </div>
+
+                <!-- Theater 3 -->
+                <div class="space-card">
+                    <div class="space-image">
+                        <div class="space-icon">🎞️</div>
+                    </div>
+                    <div class="space-details">
+                        <h3>Intimate Studio</h3>
+                        <div class="space-features">
+                            <span>👥 Capacity: 25 seats</span>
+                            <span>🎨 Art House Atmosphere</span>
+                            <span>☕ Complimentary Refreshments</span>
+                            <span>⏱️ Full Day: $350</span>
+                            <span>⏱️ Half Day: $200</span>
+                        </div>
+                        <button class="btn-book" onclick="openSpaceBooking('Intimate Studio', 350, 200)">Book Space</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Past Events Gallery</h2>
+            <p class="section-subtitle">Memorable moments from our previous screenings and events</p>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" onclick="filterGallery('all')">All</button>
+                <button class="filter-btn" onclick="filterGallery('premieres')">Premieres</button>
+                <button class="filter-btn" onclick="filterGallery('festivals')">Festivals</button>
+                <button class="filter-btn" onclick="filterGallery('private')">Private Events</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item" data-category="premieres">
+                    <div class="gallery-image">
+                        <div class="gallery-placeholder">🎬</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Summer Blockbuster Premiere</h3>
+                        <p>August 2025</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item" data-category="festivals">
+                    <div class="gallery-image">
+                        <div class="gallery-placeholder">🎪</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Independent Film Festival</h3>
+                        <p>July 2025</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item" data-category="private">
+                    <div class="gallery-image">
+                        <div class="gallery-placeholder">🎉</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Corporate Screening Event</h3>
+                        <p>June 2025</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item" data-category="premieres">
+                    <div class="gallery-image">
+                        <div class="gallery-placeholder">⭐</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Celebrity Red Carpet Night</h3>
+                        <p>May 2025</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item" data-category="festivals">
+                    <div class="gallery-image">
+                        <div class="gallery-placeholder">🎭</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Classic Cinema Marathon</h3>
+                        <p>April 2025</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item" data-category="private">
+                    <div class="gallery-image">
+                        <div class="gallery-placeholder">🎂</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Birthday Movie Party</h3>
+                        <p>March 2025</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item" data-category="premieres">
+                    <div class="gallery-image">
+                        <div class="gallery-placeholder">🎥</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Documentary Premiere</h3>
+                        <p>February 2025</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item" data-category="festivals">
+                    <div class="gallery-image">
+                        <div class="gallery-placeholder">🌟</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Horror Film Festival</h3>
+                        <p>January 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBooking()">&times;</span>
+            <h2 id="modalTitle">Book Your Tickets</h2>
+            
+            <div class="booking-form">
+                <div class="form-group">
+                    <label>Number of Tickets</label>
+                    <div class="ticket-selector">
+                        <button onclick="updateTickets(-1)">-</button>
+                        <input type="number" id="ticketCount" value="1" min="1" max="10" readonly>
+                        <button onclick="updateTickets(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Seat Type</label>
+                    <select id="seatType" onchange="updateTotal()">
+                        <option value="1">Standard</option>
+                        <option value="1.5">Premium (+50%)</option>
+                        <option value="2">VIP (+100%)</option>
+                    </select>
+                </div>
+
+                <div class="booking-summary">
+                    <div class="summary-row">
+                        <span>Ticket Price:</span>
+                        <span id="ticketPrice">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Quantity:</span>
+                        <span id="quantity">1</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Seat Multiplier:</span>
+                        <span id="multiplier">1x</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="totalPrice">$0.00</span>
+                    </div>
+                </div>
+
+                <button class="btn-primary full-width" onclick="proceedToPayment()">Proceed to Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Space Booking Modal -->
+    <div id="spaceBookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSpaceBooking()">&times;</span>
+            <h2 id="spaceModalTitle">Book Space</h2>
+            
+            <div class="booking-form">
+                <div class="form-group">
+                    <label>Event Date</label>
+                    <input type="date" id="eventDate" min="2025-10-14">
+                </div>
+
+                <div class="form-group">
+                    <label>Duration</label>
+                    <select id="spaceDuration" onchange="updateSpaceTotal()">
+                        <option value="half">Half Day (4 hours)</option>
+                        <option value="full">Full Day (8 hours)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Expected Guests</label>
+                    <input type="number" id="guestCount" min="1" placeholder="Number of guests">
+                </div>
+
+                <div class="form-group">
+                    <label>Event Type</label>
+                    <select id="eventType">
+                        <option value="private">Private Screening</option>
+                        <option value="corporate">Corporate Event</option>
+                        <option value="birthday">Birthday Party</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Additional Services</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="catering" onchange="updateSpaceTotal()">
+                            Catering (+$200)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="decoration" onchange="updateSpaceTotal()">
+                            Decoration (+$150)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="techSupport" onchange="updateSpaceTotal()">
+                            Tech Support (+$100)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="booking-summary">
+                    <div class="summary-row">
+                        <span>Base Price:</span>
+                        <span id="spaceBasePrice">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Additional Services:</span>
+                        <span id="additionalServices">$0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="spaceTotalPrice">$0.00</span>
+                    </div>
+                </div>
+
+                <button class="btn-primary full-width" onclick="proceedToSpacePayment()">Proceed to Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePayment()">&times;</span>
+            <h2>Complete Your Payment</h2>
+            
+            <div class="payment-form">
+                <div class="form-group">
+                    <label>Cardholder Name</label>
+                    <input type="text" id="cardName" placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Expiry Date</label>
+                        <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label>CVV</label>
+                        <input type="text" id="cvv" placeholder="123" maxlength="3">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="your@email.com">
+                </div>
+
+                <div class="payment-summary">
+                    <div class="summary-row total">
+                        <span>Amount to Pay:</span>
+                        <span id="paymentTotal">$0.00</span>
+                    </div>
+                </div>
+
+                <button class="btn-primary full-width" onclick="processPayment()">Complete Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-content">
+            <div class="success-icon">✓</div>
+            <h2>Booking Confirmed!</h2>
+            <p>Your booking has been confirmed successfully.</p>
+            <p class="confirmation-text">A confirmation email has been sent to your email address.</p>
+            <button class="btn-primary" onclick="closeSuccess()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CINEMAX</h3>
+                    <p>Your premier destination for movie events and entertainment.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#events">Events</a>
+                    <a href="#booking-space">Book Space</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@cinemax.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CineMax. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentMovie = '';
+        let basePrice = 0;
+        let currentSpace = '';
+        let fullDayPrice = 0;
+        let halfDayPrice = 0;
+
+        // Ticket Booking Functions
+        function openBooking(movieName, price) {
+            currentMovie = movieName;
+            basePrice = price;
+            document.getElementById('modalTitle').textContent = `Book Tickets - ${movieName}`;
+            document.getElementById('ticketCount').value = 1;
+            document.getElementById('seatType').value = 1;
+            updateTotal();
+            document.getElementById('bookingModal').style.display = 'block';
+        }
+
+        function closeBooking() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+
+        function updateTickets(change) {
+            const input = document.getElementById('ticketCount');
+            let value = parseInt(input.value) + change;
+            if (value >= 1 && value <= 10) {
+                input.value = value;
+                updateTotal();
+            }
+        }
+
+        function updateTotal() {
+            const tickets = parseInt(document.getElementById('ticketCount').value);
+            const multiplier = parseFloat(document.getElementById('seatType').value);
+            const total = basePrice * tickets * multiplier;
+            
+            document.getElementById('ticketPrice').textContent = `$${basePrice.toFixed(2)}`;
+            document.getElementById('quantity').textContent = tickets;
+            document.getElementById('multiplier').textContent = `${multiplier}x`;
+            document.getElementById('totalPrice').textContent = `$${total.toFixed(2)}`;
+        }
+
+        function proceedToPayment() {
+            const total = document.getElementById('totalPrice').textContent;
+            document.getElementById('paymentTotal').textContent = total;
+            closeBooking();
+            document.getElementById('paymentModal').style.display = 'block';
+        }
+
+        // Space Booking Functions
+        function openSpaceBooking(spaceName, fullPrice, halfPrice) {
+            currentSpace = spaceName;
+            fullDayPrice = fullPrice;
+            halfDayPrice = halfPrice;
+            document.getElementById('spaceModalTitle').textContent = `Book ${spaceName}`;
+            document.getElementById('spaceDuration').value = 'half';
+            document.getElementById('catering').checked = false;
+            document.getElementById('decoration').checked = false;
+            document.getElementById('techSupport').checked = false;
+            updateSpaceTotal();
+            document.getElementById('spaceBookingModal').style.display = 'block';
+        }
+
+        function closeSpaceBooking() {
+            document.getElementById('spaceBookingModal').style.display = 'none';
+        }
+
+        function updateSpaceTotal() {
+            const duration = document.getElementById('spaceDuration').value;
+            const basePrice = duration === 'full' ? fullDayPrice : halfDayPrice;
+            
+            let additionalCost = 0;
+            if (document.getElementById('catering').checked) additionalCost += 200;
+            if (document.getElementById('decoration').checked) additionalCost += 150;
+            if (document.getElementById('techSupport').checked) additionalCost += 100;
+            
+            const total = basePrice + additionalCost;
+            
+            document.getElementById('spaceBasePrice').textContent = `$${basePrice.toFixed(2)}`;
+            document.getElementById('additionalServices').textContent = `$${additionalCost.toFixed(2)}`;
+            document.getElementById('spaceTotalPrice').textContent = `$${total.toFixed(2)}`;
+        }
+
+        function proceedToSpacePayment() {
+            const eventDate = document.getElementById('eventDate').value;
+            const guestCount = document.getElementById('guestCount').value;
+            
+            if (!eventDate || !guestCount) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            const total = document.getElementById('spaceTotalPrice').textContent;
+            document.getElementById('paymentTotal').textContent = total;
+            closeSpaceBooking();
+            document.getElementById('paymentModal').style.display = 'block';
+        }
+
+        // Payment Functions
+        function closePayment() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+
+        function processPayment() {
+            const cardName = document.getElementById('cardName').value;
+            const cardNumber = document.getElementById('cardNumber').value;
+            const expiryDate = document.getElementById('expiryDate').value;
+            const cvv = document.getElementById('cvv').value;
+            const email = document.getElementById('email').value;
+
+            if (!cardName || !cardNumber || !expiryDate || !cvv || !email) {
+                alert('Please fill in all payment details');
+                return;
+            }
+
+            closePayment();
+            document.getElementById('successModal').style.display = 'block';
+            
+            // Clear form
+            document.getElementById('cardName').value = '';
+            document.getElementById('cardNumber').value = '';
+            document.getElementById('expiryDate').value = '';
+            document.getElementById('cvv').value = '';
+            document.getElementById('email').value = '';
+        }
+
+        function closeSuccess() {
+            document.getElementById('successModal').style.display = 'none';
+        }
+
+        // Gallery Filter Functions
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const bookingModal = document.getElementById('bookingModal');
+            const spaceBookingModal = document.getElementById('spaceBookingModal');
+            const paymentModal = document.getElementById('paymentModal');
+            const successModal = document.getElementById('successModal');
+            
+            if (event.target == bookingModal) closeBooking();
+            if (event.target == spaceBookingModal) closeSpaceBooking();
+            if (event.target == paymentModal) closePayment();
+            if (event.target == successModal) closeSuccess();
+        }
+
+        // Format card number
+        document.getElementById('cardNumber').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s/g, '');
+            let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+            e.target.value = formattedValue;
+        });
+
+        // Format expiry date
+        document.getElementById('expiryDate').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.slice(0, 2) + '/' + value.slice(2, 4);
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
